@@ -43,7 +43,7 @@ class Engine < ::Rails::Engine
                       end
 
   is_running_rails = defined?(Rails) && Rails.respond_to?(:version)
-  is_running_rails_32 = is_running_rails && Rails.version.match(/3\.2/)
+  is_running_rails_32 = is_running_rails && Rails.version.match(/^3\.2/)
 
   initializer 'js-routes.dependent_on_routes', initializer_args do
     case sprockets_version
